@@ -5,6 +5,8 @@ import {
 } from "@react-three/drei";
 import { Suspense } from "react";
 
+import { FloatIsland } from "../FloatIsland";
+
 export const SceneContainer = () => {
     return (
         <Suspense fallback={null}>
@@ -22,6 +24,7 @@ export const SceneContainer = () => {
                 position={[-1.75, 10.05, 20.35]}
             />
             <OrbitControls target={[1, 5, 0]} maxPolarAngle={Math.PI * 0.5} />
+            <FloatIsland />
         </Suspense>
     );
 };
